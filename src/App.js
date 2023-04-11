@@ -38,8 +38,8 @@ function App() {
 
   useEffect(() => {
     setArticle(`<div class="content>\n${content}</div>
-<div class="metatags">\n<pre>\n${JSON.stringify(metaTags, null, 2)}\n</pre>\n</div>
-<div class="faqItems">\n<pre>\n${JSON.stringify(faqItems, null, 2)}\n</pre>\n</div>`)
+<div class="metatags" style="visibility: hidden; height: 0 !important; width: 0 !important;">\n<pre>\n${JSON.stringify(metaTags, null, 2)}\n</pre>\n</div>
+<div class="faqItems" style="visibility: hidden; height: 0 !important; width: 0 !important;">\n<pre>\n${JSON.stringify(faqItems, null, 2)}\n</pre>\n</div>`)
   }, [content, faqItems, metaTags]);
 
   const handleMetaTagsChange = (newMetaTags) => {
