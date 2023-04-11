@@ -61,13 +61,12 @@ function App() {
             </CopyToClipboard>
           </div>
           <pre className='bg-gray-100 rounded p-4'>{article}</pre>
-
         </div>
-
       </div>
-
-
-
+      {/* <hr className='my-8' />
+      <div className='flex justify-center'>
+        <h1>Preview</h1>
+      </div> */}
     </div>
   );
 }
