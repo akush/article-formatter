@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,57 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+label {
+  @apply font-semibold mb-1;
+}
+
+input {
+  @apply border border-gray-300 p-2;
+}
+
+/* Typography */
+h1 {
+  @apply text-4xl font-semibold leading-tight my-4;
+}
+
+h2 {
+  @apply text-3xl font-semibold leading-snug my-3;
+}
+
+h3 {
+  @apply text-2xl font-semibold leading-relaxed my-2;
+}
+
+h4 {
+  @apply text-xl font-semibold leading-normal my-2;
+}
+
+h5 {
+  @apply text-lg font-semibold leading-normal my-1;
+}
+
+h6 {
+  @apply text-base font-semibold leading-normal my-1;
+}
+
+p {
+  @apply text-base leading-normal my-2;
+}
+
+.small-text {
+  @apply text-sm leading-normal my-1;
+}
+
+.caption {
+  @apply text-xs leading-normal my-1;
+}
+
+pre {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
