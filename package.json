@@ -1,5 +1,5 @@
 {
-  "name": "my-wysiwyg-editor",
+  "name": "article-formatter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
