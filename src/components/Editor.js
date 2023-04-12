@@ -5,33 +5,34 @@ import 'react-quill/dist/quill.snow.css';
 import prettier from 'prettier/standalone';
 import parserHtml from 'prettier/parser-html';
 
+const modules = {
+  toolbar: [
+    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+    ['bold', 'italic', 'underline'],
+    ['blockquote'], //, 'code-block'
+    // [{ 'header': 1 }, { 'header': 2 }],
+    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+    [{ 'indent': '-1' }, { 'indent': '+1' }],
+    // [{ 'size': ['small', false, 'large', 'huge'] }],
+    // [{ 'color': [] }, { 'background': [] }],
+    // [{ 'font': [] }],
+    [{ 'align': [] }],
+    ['clean']
+  ],
+};
+
+const formats = [
+  'bold', 'italic', 'underline', // 'strike',
+  'blockquote', // 'code-block',
+  'header', 'list', // 'script',
+  // 'indent', 'direction', 'size',
+  'header', 'color', 'background',
+  // 'font', 'align',
+  'clean'
+];
+
 const Editor = ({ onContentChange }) => {
   const [content, setContent] = useState('');
-
-  // const contentModules = {
-  //   toolbar: [
-  //     ['bold', 'italic', 'underline', 'strike'],
-  //     ['blockquote', 'code-block'],
-  //     [{ 'header': 1 }, { 'header': 2 }],
-  //     [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-  //     [{ 'script': 'sub' }, { 'script': 'super' }],
-  //     [{ 'size': ['small', false, 'large', 'huge'] }],
-  //     [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-  //     [{ 'color': [] }, { 'background': [] }],
-  //     [{ 'align': [] }],
-  //     ['clean']
-  //   ],
-  // };
-
-  // const formats = [
-  //   'bold', 'italic', 'underline', 'strike',
-  //   'blockquote', 'code-block',
-  //   'header', 'list', 'script',
-  //   'indent', 'direction', 'size',
-  //   'header', 'color', 'background',
-  //   'font', 'align',
-  //   'clean'
-  // ];
 
   const prettifyHtml = (html) => {
     const formattedHtml = prettier.format(html, {
@@ -51,8 +52,8 @@ const Editor = ({ onContentChange }) => {
     <div className="w-full">
       <label>Content</label>
       <ReactQuill
-        // modules={contentModules}
-        // formats={formats}
+        modules={modules}
+        formats={formats}
         className="w-full"
         theme="snow"
         value={content}

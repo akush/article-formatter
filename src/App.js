@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import 'react-quill/dist/quill.snow.css';
-import './App.css';
 import MetaTags from './components/MetaTags';
 import Editor from './components/Editor';
 import FAQ from './components/FAQ';
