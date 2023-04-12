@@ -1,6 +1,6 @@
 // components/MetaTags.js
 import React, { useEffect, useState } from 'react';
-import OpenGraphPreview from './OpenGraphPreview';
+// import OpenGraphPreview from './OpenGraphPreview';
 
 // Order Food Online On Train | Quick & Tasty Food Delivery in Train
 // Order Online Cheap Veg and Non-veg Food on Running Train & Enjoy Journey. Grab The Best Offers on Food in Train Food Delivery by Our Travel and Rail Khana Services.
