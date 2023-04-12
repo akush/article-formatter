@@ -8,10 +8,10 @@ import OpenGraphPreview from './OpenGraphPreview';
 
 const MetaTags = ({ onMetaTagsChange }) => {
   const [metaTags, setMetaTags] = useState({
-    title: '',
-    description: '',
+    // title: '',
+    // description: '',
     keywords: '',
-    image: '',
+    // image: '',
   });
 
   const handleInputChange = (e) => {
@@ -29,7 +29,7 @@ const MetaTags = ({ onMetaTagsChange }) => {
   return (
     <div className="flex flex-col md:flex-row w-full gap-8">
       <div className='w-full'>
-        <div className="flex flex-col">
+        {/* <div className="flex flex-col">
           <label htmlFor="title" className="label">Title:</label>
           <input
             type="text"
@@ -48,7 +48,7 @@ const MetaTags = ({ onMetaTagsChange }) => {
             onChange={handleInputChange}
             className="input"
           />
-        </div>
+        </div> */}
         <div className="flex flex-col">
           <label htmlFor="keywords" className="label">Keywords:</label>
           <input
@@ -59,7 +59,7 @@ const MetaTags = ({ onMetaTagsChange }) => {
             className="input"
           />
         </div>
-        <div className="flex flex-col">
+        {/* <div className="flex flex-col">
           <label htmlFor="image" className="label">Image URL (for Open Graph and Twitter):</label>
           <input
             type="text"
@@ -68,12 +68,12 @@ const MetaTags = ({ onMetaTagsChange }) => {
             onChange={handleInputChange}
             className="input"
           />
-        </div>
+        </div> */}
       </div>
-      <div className='w-full'>
-        <h3>Open Graph / Twitter Preview</h3>
+      {/* <div className='w-full'>
+        <label>Open Graph / Twitter Preview</label>
         <OpenGraphPreview title={metaTags.title} description={metaTags.description} image={metaTags.image} />
-      </div>
+      </div> */}
     </div>
   );
 };

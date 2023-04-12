@@ -46,9 +46,9 @@ function App() {
   return (
     <div className='w-full p-8 mx-auto'>
       <h1 style={{ textAlign: "center" }}>Create blog/page content</h1>
-      <MetaTags onMetaTagsChange={setMetaTags} />
       <div className='flex flex-col md:flex-row gap-8 content-start'>
         <div className='w-full md:w-1/2'>
+          <MetaTags onMetaTagsChange={setMetaTags} />
           <Editor onContentChange={setContent} />
           <FAQ onFaqChange={setFaqItems} />
         </div>
