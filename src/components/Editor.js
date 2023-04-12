@@ -25,7 +25,7 @@ const formats = [
   'bold', 'italic', 'underline', // 'strike',
   'blockquote', // 'code-block',
   'header', 'list', // 'script',
-  // 'indent', 'direction', 'size',
+  'indent', // 'direction', 'size',
   'header', 'color', 'background',
   // 'font', 'align',
   'clean'
