@@ -55,6 +55,7 @@ const FAQ = ({ onFaqChange }) => {
           <div className="flex items-start mb-2">
             <label className="w-32">Answer:</label>
             <textarea
+              rows={3}
               className="border rounded w-full p-1"
               value={item.answer}
               onChange={(e) => handleUpdateItem(index, 'answer', e.target.value)}
