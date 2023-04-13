@@ -1,5 +1,6 @@
 // components/FAQ.js
 import React, { useEffect, useState } from 'react';
+import AutoExpandingTextarea from './AutoExpandingTextarea';
 
 const FAQ = ({ onFaqChange }) => {
   const [faqItems, setFaqItems] = useState([]);
@@ -54,12 +55,8 @@ const FAQ = ({ onFaqChange }) => {
           </div>
           <div className="flex items-start mb-2">
             <label className="w-32">Answer:</label>
-            <textarea
-              rows={3}
-              className="border rounded w-full p-1"
-              value={item.answer}
-              onChange={(e) => handleUpdateItem(index, 'answer', e.target.value)}
-            />
+            <AutoExpandingTextarea className="border rounded w-full p-1" value={item.answer}
+              onChange={(e) => handleUpdateItem(index, 'answer', e.target.value)} />
           </div>
           <div className="flex items-center">
             <button
